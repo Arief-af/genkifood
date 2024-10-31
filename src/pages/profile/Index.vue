@@ -9,6 +9,11 @@ onMounted(() => {
   data.value = JSON.parse(localStorage.getItem("profile"));
 });
 
+const logout = () => {
+  localStorage.removeItem("data");
+  router.push("/login");
+}
+
 const router = useRouter();
 const onSubmit = () => {
   try {
@@ -82,6 +87,7 @@ const onSubmit = () => {
           Update
         </button>
         <button
+          @click="logout"
           type="submit"
           class="mb-5 bg-red-700 mt-5 border-0 text-white hover:bg-red-700 hover:text-white w-full btn rounded-md"
         >
