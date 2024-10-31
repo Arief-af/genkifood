@@ -41,6 +41,17 @@
         name="home"
       ></box-icon>
     </div>
+
+    <div
+      @click="$router.push('/cart')"
+      :class="currentRoute == '/cart' ? 'bg-primary' : ''"
+      class="w-16 h-16 flex justify-center items-center text-sm rounded-full shadow text-primary"
+    >
+      <box-icon
+        :class="currentRoute == '/cart' ? 'fill-dark' : 'fill-primary'"
+        name="cart"
+      ></box-icon>
+    </div>
   </footer>
 </template>
 

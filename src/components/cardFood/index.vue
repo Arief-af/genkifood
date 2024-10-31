@@ -27,7 +27,7 @@ const props = defineProps({
 });
 
 const formatedPrice = (price) => {
-  return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 </script>
 

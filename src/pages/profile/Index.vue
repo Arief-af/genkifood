@@ -69,17 +69,23 @@ const onSubmit = () => {
           placeholder="Masukan tanggal lahir anda"
           class="my-5"
         >
-          <template #label>Date*</template>
-          <template v-if="errors.phone_number" #error>{{
+          <template #label>Birthdate</template>
+          <template v-if="errors.date" #error>{{
             errors.date[0]
           }}</template>
         </FormInput>
 
         <button
           type="submit"
-          class="mb-5 bg-primary mt-5 border-0 text-dark hover:bg-primary hover:text-dark w-full btn rounded-md"
+          class=" bg-primary mt-5 border-0 text-dark hover:bg-primary hover:text-dark w-full btn rounded-md"
         >
           Update
+        </button>
+        <button
+          type="submit"
+          class="mb-5 bg-red-700 mt-5 border-0 text-white hover:bg-red-700 hover:text-white w-full btn rounded-md"
+        >
+          Logout
         </button>
       </form>
       <section class="flex justify-center my-5">
@@ -87,7 +93,7 @@ const onSubmit = () => {
           <div class="text-primary text-center text-lg font-bold">
             Rating This App
           </div>
-          <div class="rating my-2 mx-auto">
+          <div class="rating my-2 mx-auto flex gap-2">
             <input
               type="radio"
               name="rating-4"
@@ -102,16 +108,19 @@ const onSubmit = () => {
             <input
               type="radio"
               name="rating-4"
+              checked="checked"
               class="mask mask-star-2 bg-green-500"
             />
             <input
               type="radio"
               name="rating-4"
+              checked="checked"
               class="mask mask-star-2 bg-green-500"
             />
             <input
               type="radio"
               name="rating-4"
+              checked="checked"
               class="mask mask-star-2 bg-green-500"
             />
           </div>
