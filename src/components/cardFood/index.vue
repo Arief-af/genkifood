@@ -3,7 +3,7 @@
     class="bg-dark h-full min-h-[190px] p-5 rounded-lg w-[46%] relative mt-10"
   >
     <img
-      src="@/assets/images/menu/chicken.png"
+      :src="data.image"
       class="absolute w-24 -top-10 left-1/2 -translate-x-1/2"
       alt="img"
     />

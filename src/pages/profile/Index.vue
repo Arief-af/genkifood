@@ -2,14 +2,19 @@
 import { onMounted, reactive, ref } from "vue";
 
 import App from "@/layouts/App.vue";
+import { useRouter } from "vue-router";
 let data = ref({});
 const errors = ref({});
 onMounted(() => {
   data.value = JSON.parse(localStorage.getItem("profile"));
 });
+
+const router = useRouter();
 const onSubmit = () => {
   try {
     localStorage.setItem("profile", JSON.stringify(data.value));
+
+    router.push("/home");
   } catch (error) {
     console.log(error);
   }
@@ -18,8 +23,7 @@ const onSubmit = () => {
 
 <template>
   <App>
-    <div class="p-10">
-      <h2 class="text-3xl text-primary">Profile</h2>
+    <div>
       <form @submit.prevent="onSubmit">
         <FormInput
           v-model="data.name"
@@ -84,33 +88,33 @@ const onSubmit = () => {
             Rating This App
           </div>
           <div class="rating my-2 mx-auto">
-          <input
-            type="radio"
-            name="rating-4"
-            class="mask mask-star-2 bg-green-500"
-          />
-          <input
-            type="radio"
-            name="rating-4"
-            class="mask mask-star-2 bg-green-500"
-            checked="checked"
-          />
-          <input
-            type="radio"
-            name="rating-4"
-            class="mask mask-star-2 bg-green-500"
-          />
-          <input
-            type="radio"
-            name="rating-4"
-            class="mask mask-star-2 bg-green-500"
-          />
-          <input
-            type="radio"
-            name="rating-4"
-            class="mask mask-star-2 bg-green-500"
-          />
-        </div>
+            <input
+              type="radio"
+              name="rating-4"
+              class="mask mask-star-2 bg-green-500"
+            />
+            <input
+              type="radio"
+              name="rating-4"
+              class="mask mask-star-2 bg-green-500"
+              checked="checked"
+            />
+            <input
+              type="radio"
+              name="rating-4"
+              class="mask mask-star-2 bg-green-500"
+            />
+            <input
+              type="radio"
+              name="rating-4"
+              class="mask mask-star-2 bg-green-500"
+            />
+            <input
+              type="radio"
+              name="rating-4"
+              class="mask mask-star-2 bg-green-500"
+            />
+          </div>
         </div>
       </section>
     </div>

@@ -1,7 +1,7 @@
 <template>
   <header class="bg-dark-cover justify-between flex px-10 items-center text-white h-[100px]">
     <section>
-      Hey, User! <br>
+      Hey, {{ data.username }} <br>
       <span class="opacity-50 text-sm">Ready to eat?</span>
     </section>
     <section>
@@ -18,7 +18,7 @@
     </Transition>
   </main>
   <footer
-    class="footer absolute w-[90%] h-[74px] flex gap-2 justify-center items-center bottom-6 left-1/2 transform -translate-x-1/2 bg-dark-cover bg-opacity-50 backdrop-filter backdrop-blur-lg shadow-lg rounded-full"
+    class="footer absolute w-[100%] h-[74px] bg-dark-cover backdrop-filter backdrop-blur-lg shadow-lg rounded-t-full bg-opacity-50 bottom-0 justify-center items-center flex gap-2"
   >
     <div
       @click="$router.push('/profile')"
@@ -50,7 +50,7 @@ import { onMounted, ref } from "vue";
 import { useRoute } from "vue-router";
 const route = useRoute();
 const currentRoute = ref(route.path);
-console.log(currentRoute.value);
+const data = ref(JSON.parse(localStorage.getItem("profile")));
 
 const transition = ref(false);
 onMounted(() => {

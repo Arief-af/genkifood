@@ -1,10 +1,11 @@
 import { createRouter, createWebHistory } from "vue-router";
-import IndexPage from "@/pages/index.vue";
 import IndexAuthPage from "@/pages/auth/index/Index.vue";
 import LoginPage from "@/pages/auth/login/Index.vue";
 import RegisterPage from "@/pages/auth/register/Index.vue";
 import HomePage from "@/pages/home/index.vue";
 import Profile from "@/pages/profile/index.vue";
+import FoodPage from "@/pages/food/index.vue";
+import Cart from "@/pages/cart/index.vue";
 
 const routes = [
   {
@@ -35,6 +36,18 @@ const routes = [
     path: "/profile",
     name: "profile",
     component: Profile,
+    meta: { transition: "slide-left" },
+  },
+  {
+    path: "/food/:id",
+    name: "food",
+    component: FoodPage,
+    meta: { transition: "slide-left" },
+  },
+  {
+    path: "/cart",
+    name: "cart",
+    component: Cart,
     meta: { transition: "slide-left" },
   },
 ];
