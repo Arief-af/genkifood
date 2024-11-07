@@ -1,9 +1,13 @@
 <template>
   <AppLayout>
-    <HeroCard />
-    <Category :data="data" @update:activeCategory="onChangeCategory" />
+    <div v-if="skeleton" class="w-full bg-dark skeleton h-32"></div>
+    <HeroCard v-else />
+    <div v-if="skeleton" class="w-full bg-dark skeleton mt-4 h-12"></div>
+    <Category v-else :data="data" @update:activeCategory="onChangeCategory" />
     <div class="flex justify-between gap-5 flex-wrap mt-5 items-stretch">
+      <div v-if="skeleton" class="w-full bg-dark skeleton h-[320px]"></div>
       <CardFood
+        v-else
         @click="router.push({ path: `food/${food.id}` })"
         v-for="food in filteredFoodData"
         :key="food.name"
@@ -24,6 +28,14 @@ import ChickenImage from "@/assets/images/menu/chicken.png";
 import MieImage from "@/assets/images/menu/mie.png";
 let data = ref([]);
 const router = useRouter();
+
+let skeleton = ref(true);
+
+const myTimeout = setTimeout(myGreeting, 3000);
+
+function myGreeting() {
+  skeleton.value = false;
+}
 
 const activeCategory = ref(""); // Track the selected category
 const foodData = ref([

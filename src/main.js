@@ -1,5 +1,6 @@
 import { createApp } from "vue";
 import "./assets/css/app.css";
+import "aos/dist/aos.css";
 import router from "./router";
 import App from "./App.vue";
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'

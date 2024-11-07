@@ -6,7 +6,12 @@ import HomePage from "@/pages/home/index.vue";
 import Profile from "@/pages/profile/index.vue";
 import FoodPage from "@/pages/food/index.vue";
 import Cart from "@/pages/cart/index.vue";
-
+import App from "@/pages/app/index.vue";
+import calculator from "@/pages/app/calculator/index.vue";
+import bmi from "@/pages/app/bmi/index.vue";
+import suhu from "@/pages/app/suhu/index.vue";
+import money from "@/pages/app/money/index.vue";
+import countdown from "@/pages/app/countdown/index.vue";
 const routes = [
   {
     path: "/",
@@ -48,6 +53,42 @@ const routes = [
     path: "/cart",
     name: "cart",
     component: Cart,
+    meta: { transition: "slide-left" },
+  },
+  {
+    path: "/app",
+    name: "app",
+    component: App,
+    meta: { transition: "slide-left" },
+  },
+  {
+    path: "/app/calculator",
+    name: "calculator",
+    component: calculator,
+    meta: { transition: "slide-left" },
+  },
+  {
+    path: "/app/bmi",
+    name: "bmi",
+    component: bmi,
+    meta: { transition: "slide-left" },
+  },
+  {
+    path: "/app/suhu",
+    name: "suhu",
+    component: suhu,
+    meta: { transition: "slide-left" },
+  },
+  {
+    path: "/app/money",
+    name: "money",
+    component: money,
+    meta: { transition: "slide-left" },
+  },
+  {
+    path: "/app/countdown",
+    name: "countdown",
+    component: countdown,
     meta: { transition: "slide-left" },
   },
 ];

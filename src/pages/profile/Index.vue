@@ -94,6 +94,7 @@ const onSubmit = () => {
           Logout
         </button>
       </form>
+      <div class="text-center">Created By Arief - 152022262</div>
       <section class="flex justify-center my-5">
         <div>
           <div class="text-primary text-center text-lg font-bold">

@@ -52,6 +52,17 @@
         name="cart"
       ></box-icon>
     </div>
+
+    <div
+      @click="$router.push('/app')"
+      :class="currentRoute == '/app' ? 'bg-primary' : ''"
+      class="w-16 h-16 flex justify-center items-center text-sm rounded-full shadow text-primary"
+    >
+      <box-icon
+        :class="currentRoute == '/app' ? 'fill-dark' : 'fill-primary'"
+        name="customize"
+      ></box-icon>
+    </div>
   </footer>
 </template>
 

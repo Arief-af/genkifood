@@ -6,7 +6,7 @@
         <div class="text-2xl text-white px-10 py-10">
             <div class="mb-2 font-bold text-primary">genkifood</div>
             <div class="mb-12 font-light">
-                Atur Keuangan, Raih Impian
+                Udah siap makan?
             </div>
             <button @click="$router.push('/login')" class="btn bg-primary text-dark border-0 hover:bg-primary block w-full">Login</button>
         </div>

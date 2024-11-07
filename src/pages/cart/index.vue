@@ -38,7 +38,7 @@ import { onMounted, ref, computed } from "vue";
 import { useRouter } from "vue-router";
 const formatedPrice = (price) => {
   return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
+};
 let favorit = ref(false);
 const data = ref(JSON.parse(localStorage.getItem("profile")));
 console.log(data.value);
@@ -67,7 +67,7 @@ const calculateTotal = () => {
 
 const removeItem = (id) => {
   cartStore.removeData(id);
-}
+};
 
 const totalPrice = computed(() => calculateTotal());
 const discount = computed(() => Math.min(totalPrice.value * 0.3, 20000));
