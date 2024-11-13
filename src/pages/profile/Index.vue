@@ -10,9 +10,9 @@ onMounted(() => {
 });
 
 const logout = () => {
-  localStorage.removeItem("data");
+  localStorage.setItem("profile", JSON.stringify({}));
   router.push("/login");
-}
+};
 
 const router = useRouter();
 const onSubmit = () => {
@@ -75,14 +75,12 @@ const onSubmit = () => {
           class="my-5"
         >
           <template #label>Birthdate</template>
-          <template v-if="errors.date" #error>{{
-            errors.date[0]
-          }}</template>
+          <template v-if="errors.date" #error>{{ errors.date[0] }}</template>
         </FormInput>
 
         <button
           type="submit"
-          class=" bg-primary mt-5 border-0 text-dark hover:bg-primary hover:text-dark w-full btn rounded-md"
+          class="bg-primary mt-5 border-0 text-dark hover:bg-primary hover:text-dark w-full btn rounded-md"
         >
           Update
         </button>

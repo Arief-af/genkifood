@@ -1,5 +1,10 @@
 {
   "appId": "com.genkifood",
   "appName": "genkifood",
-  "webDir": "dist"
+  "webDir": "dist",
+  "SplashScreen": {
+    "launchShowDuration": 0,
+    "launchAutoHide": true,
+    "backgroundColor": "#ffffffff"
+  }
 }

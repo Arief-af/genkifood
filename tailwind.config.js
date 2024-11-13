@@ -19,6 +19,9 @@ module.exports = {
       },
     },
     extend: {
+      animation: {
+        'tuing': 'tuing 1s ease-in-out infinite',
+      },
       backgroundColor: {
         'dark': '#212121',
         'dark-cover': "#0C0C0C",
