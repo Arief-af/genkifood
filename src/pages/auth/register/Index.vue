@@ -36,7 +36,7 @@ const onSubmit = () => {
 </script>
 
 <template>
-  <AuthLayout title="Register Akun" back-path="/">
+  <AuthLayout title="Register Akun" back-path="/login">
     <form @submit.prevent="onSubmit">
       <FormInput
         v-model="data.name"

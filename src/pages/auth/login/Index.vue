@@ -26,7 +26,7 @@ const onSubmit = () => {
 
     if (user) {
       notificationStore.showNotification("Login Berhasil!", "success");
-      router.push("/home");
+      router.push("/");
     } else {
       notificationStore.showNotification(
         "Username atau password tidak sesuai!",

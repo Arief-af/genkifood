@@ -87,7 +87,7 @@
           </button>
           <button
             type="submit"
-            @click="addToCart('/home')"
+            @click="addToCart('/')"
             class="w-1/2 bg-primary outline-none border-0 text-dark hover:bg-primary hover:text-dark btn rounded-md"
           >
             Add To Cart {{ formatedPrice(total_price) }}

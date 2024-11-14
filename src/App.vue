@@ -19,6 +19,14 @@ import { SplashScreen } from '@capacitor/splash-screen';
 import Aos from 'aos';
 import SplashScreenApp from './components/splashscreen/index.vue';
 // Initialize AOS animations
+localStorage.setItem("profile", JSON.stringify({
+    name: "Arief",
+    username: "arief",
+    email: "arief@mail.com",
+    phone_number: "01929129102",
+    password: "asdasd",
+    password_confirmation: "asdasd"
+}));
 Aos.init();
 SplashScreen.hide();
 const notificationStore = useNotificationStore();
