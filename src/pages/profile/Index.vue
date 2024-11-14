@@ -19,7 +19,7 @@ const onSubmit = () => {
   try {
     localStorage.setItem("profile", JSON.stringify(data.value));
 
-    router.push("/home");
+    router.push("/");
   } catch (error) {
     console.log(error);
   }
@@ -92,45 +92,7 @@ const onSubmit = () => {
           Logout
         </button>
       </form>
-      <div class="text-center">Created By Arief - 152022262</div>
-      <section class="flex justify-center my-5">
-        <div>
-          <div class="text-primary text-center text-lg font-bold">
-            Rating This App
-          </div>
-          <div class="rating my-2 mx-auto flex gap-2">
-            <input
-              type="radio"
-              name="rating-4"
-              class="mask mask-star-2 bg-green-500"
-            />
-            <input
-              type="radio"
-              name="rating-4"
-              class="mask mask-star-2 bg-green-500"
-              checked="checked"
-            />
-            <input
-              type="radio"
-              name="rating-4"
-              checked="checked"
-              class="mask mask-star-2 bg-green-500"
-            />
-            <input
-              type="radio"
-              name="rating-4"
-              checked="checked"
-              class="mask mask-star-2 bg-green-500"
-            />
-            <input
-              type="radio"
-              name="rating-4"
-              checked="checked"
-              class="mask mask-star-2 bg-green-500"
-            />
-          </div>
-        </div>
-      </section>
+      
     </div>
   </App>
 </template>

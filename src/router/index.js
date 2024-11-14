@@ -12,17 +12,24 @@ import bmi from "@/pages/app/bmi/index.vue";
 import suhu from "@/pages/app/suhu/index.vue";
 import money from "@/pages/app/money/index.vue";
 import countdown from "@/pages/app/countdown/index.vue";
+import AboutPage from "@/pages/about/index.vue";
 const routes = [
-  {
-    path: "/",
-    name: "index",
-    component: IndexAuthPage,
-    meta: { transition: "slide-left" },
-  },
+  // {
+  //   path: "/",
+  //   name: "index",
+  //   component: IndexAuthPage,
+  //   meta: { transition: "slide-left" },
+  // },
   {
     path: "/login",
     name: "Login",
     component: LoginPage,
+    meta: { transition: "slide-left" },
+  },
+  {
+    path: "/about",
+    name: "about",
+    component: AboutPage,
     meta: { transition: "slide-left" },
   },
   {
@@ -32,7 +39,7 @@ const routes = [
     meta: { transition: "slide-left" },
   },
   {
-    path: "/home",
+    path: "/",
     name: "home",
     component: HomePage,
     meta: { transition: "slide-left" },

@@ -1,7 +1,9 @@
 <template>
-  <header class="bg-dark-cover justify-between flex px-10 items-center text-white h-[100px]">
+  <header
+    class="bg-dark-cover justify-between flex px-10 items-center text-white h-[100px]"
+  >
     <section>
-      Hey, {{ data.username }} <br>
+      Hey, {{ data.username }} <br />
       <span class="opacity-50 text-sm">Ready to eat?</span>
     </section>
     <section>
@@ -21,6 +23,18 @@
     class="footer absolute w-[100%] h-[74px] bg-dark-cover backdrop-filter backdrop-blur-lg shadow-lg rounded-t-full bg-opacity-50 bottom-0 justify-center items-center flex gap-2"
   >
     <div
+      @click="$router.push('/about')"
+      :class="currentRoute == '/about' ? 'bg-primary' : ''"
+      class="w-16 h-16 flex justify-center items-center text-sm rounded-full shadow text-primary"
+    >
+      <box-icon
+        :class="currentRoute == '/about' ? 'fill-dark' : 'fill-primary'"
+        name="dev-to"
+        type="logo"
+      ></box-icon>
+    </div>
+
+    <div
       @click="$router.push('/profile')"
       :class="currentRoute == '/profile' ? 'bg-primary' : ''"
       class="w-16 h-16 flex justify-center items-center text-sm rounded-full shadow text-primary"
@@ -32,12 +46,12 @@
     </div>
 
     <div
-      @click="$router.push('/home')"
-      :class="currentRoute == '/home' ? 'bg-primary' : ''"
+      @click="$router.push('/')"
+      :class="currentRoute == '/' ? 'bg-primary' : ''"
       class="w-16 h-16 flex justify-center items-center text-sm rounded-full shadow text-primary"
     >
       <box-icon
-        :class="currentRoute == '/home' ? 'fill-dark' : 'fill-primary'"
+        :class="currentRoute == '/' ? 'fill-dark' : 'fill-primary'"
         name="home"
       ></box-icon>
     </div>

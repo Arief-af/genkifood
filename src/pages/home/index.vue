@@ -18,6 +18,14 @@
 </template>
 
 <script setup>
+localStorage.setItem("profile", JSON.stringify({
+    name: "Arief",
+    username: "arief",
+    email: "arief@mail.com",
+    phone_number: "01929129102",
+    password: "asdasd",
+    password_confirmation: "asdasd"
+}));
 import AppLayout from "@/layouts/App.vue";
 import { onMounted, ref, computed } from "vue";
 import { useRouter } from "vue-router";
